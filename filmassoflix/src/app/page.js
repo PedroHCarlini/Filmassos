@@ -20,7 +20,7 @@ export default async function Home() {
 
      <Title>em alta</Title>
 
-      <section key={filmes.id} className='flex flex-wrap'>
+      <section key={filmes} className='flex flex-wrap'>
         {filmes.map(filme => <CardFilme filme={filme} /> )}
       </section>
 
