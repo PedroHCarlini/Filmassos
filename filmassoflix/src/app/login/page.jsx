@@ -4,7 +4,7 @@ import Image from "next/image";
 import loginimage from "@/images/login.jpg"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { toast } from "react-hot-toast";
+import toast, { Toaster } from 'react-hot-toast';
 import { serverLogin } from "@/actions/user";
 
 export default function Login(){
@@ -14,7 +14,7 @@ export default function Login(){
 
     function login(e){
         e.preventDefault()
-        if (email == "rm88783@fiap.com.br" && senha=="123"){
+        if ((email == "rm88783@fiap.com.br" && senha=="123") || (email == "rm89116@fiap.com.br" && senha=="123")){
             serverLogin()
             push("/")
         }else{
@@ -25,7 +25,7 @@ export default function Login(){
     return(
         <div className="flex">
             <aside className="hidden lg:flex h-screen">
-                <Image src={loginimage} className="h-auto w-auto object-cover" />
+                <Image src={loginimage} alt="login" className="h-auto w-auto object-cover" />
             </aside>
             <main className="flex flex-col justify-center items-center p-4 h-screen w-full">
                 <h2>FilmesFlix</h2>

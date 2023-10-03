@@ -18,7 +18,7 @@ export default function CardFilme({filme}){
             :
                 <HeartIcon onClick={() => favoritar(filme)}  className="h-6 w-6 text-slate-100 cursor-pointer" />
             }
-            <img className='rounded' src={url_imagem} alt="" />
+            <img className='rounded' src={url_imagem} alt="Movie" />
             <span className='font-bold text-center line-clamp-1'>
                 {filme.title}
             </span>
