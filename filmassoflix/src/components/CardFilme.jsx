@@ -2,11 +2,14 @@
 
 import useFavorito from '@/hooks/filmes'
 import { HeartIcon } from '@heroicons/react/24/outline'
+import { redirects } from '../../next.config'
 
 export default function CardFilme({filme}){
     const { favorito, desfavoritar, favoritar } = useFavorito()
     
     const url_imagem = `https://image.tmdb.org/t/p/w200/${filme.poster_path}`
+    
+    const movieId =`https://www.themoviedb.org/movie/${filme.id}`
 
     return (
         <div id="card" className='flex flex-col w-40 justify-center items-center m-2'>
@@ -22,9 +25,9 @@ export default function CardFilme({filme}){
             <div>
                 <span>{filme.vote_average.toFixed(1)}</span>
             </div>
-            <a href="#" className='bg-pink-600 py-2 w-full rounded text-center'>
-                detalhes
-            </a>
+                <a href={movieId} target='_blank' className='bg-pink-600 py-2 w-full rounded text-center'>
+                    detalhes
+                </a>
         </div>
     )
 }

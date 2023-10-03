@@ -14,7 +14,7 @@ export default function NavBar(){
     return(
         <nav className="bg-slate-900 p-4">
             <ul>
-                <li><a href="#"><h1 className="text-3xl font-bold">Fiap Filmes</h1></a></li>
+                <li><a href="#"><h1 className="text-3xl font-bold">Filmaso Flix</h1></a></li>
             </ul>
             <ul>
                 <li><a href="#">favoritos</a></li>
