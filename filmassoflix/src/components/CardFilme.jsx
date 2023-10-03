@@ -12,7 +12,7 @@ export default function CardFilme({filme}){
     const movieId =`https://www.themoviedb.org/movie/${filme.id}`
 
     return (
-        <div id="card" className='flex flex-col w-40 justify-center items-center m-2'>
+        <div id="card" key={filme.id} className='flex flex-col w-40 justify-center items-center m-2'>
             { favorito ? 
                 <HeartIcon onClick={() => desfavoritar(filme)} className="h-6 w-6 text-rose-600 cursor-pointer " />
             :
