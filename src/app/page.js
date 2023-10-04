@@ -21,7 +21,7 @@ export default async function Home() {
      <Title>em alta</Title>
 
       <section  className='flex flex-wrap'>
-        {filmes.map(filme => <CardFilme filme={filme} /> )}
+        {filmes.map(filme => <CardFilme key={filme.id} filme={filme} /> )}
       </section>
 
      <Title>lançamentos</Title>
